@@ -4,12 +4,39 @@
 
 SPACING SYSTEM (px)
     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-    
+
 ONT SIZE SYSTEM (px)
     10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
 */
 
+/* Colors */
+:root {
+  --black: #000;
+  --white: #fff;
+
+  --main-green: #b4ccac;
+  --point-yellow: #d5fe77;
+  --point-green: #39f077;
+
+  --window-red: #e15750;
+  --window-yellow: #eeb335;
+  --window-green: #66c03f;
+
+  /* Shadow */
+  --shadow: 4px 4px 0px -1px #000000;
+  --shadow-big: 6px 6px 0px -1px #000000;
+
+  /* Fonts */
+  --main-font: 'Gochi Hand', cursive;
+  --sub-font: 'Just Another Hand', cursive;
+  --content-font: 'Palanquin Dark', sans-serif;
+
+  /* Size */
+  --section-size: 1200px;
+}
+
+/* Global Settings */
 * {
   padding: 0;
   margin: 0;
@@ -20,5 +47,154 @@ body {
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  min-height: 100%;
+  color: var(--black);
+  background-color: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-green);
+}
+
+section {
+  background-color: var(--white);
+}
+
+/* Navbar Section */
+.sec-nav {
+  width: var(--section-size);
+  height: 150px;
+  padding: 3em 0em;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.sec-nav nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-title {
+  font-family: var(--main-font);
+  font-size: 3rem;
+  position: relative;
+}
+
+.nav-title.left {
+  top: -16px;
+  margin-right: 1rem;
+}
+
+.nav-navIconBox {
+  background-color: var(--white);
+  border: 4px solid var(--black);
+  padding: 0.3em 0.3em;
+  position: relative;
+  right: -300px;
+  box-shadow: var(--shadow);
+  display: none;
+}
+
+.nav-navIconBox ion-icon {
+  font-size: 1.8em;
+}
+
+.sec-nav ul {
+  display: flex;
+  padding: 1em;
+}
+.sec-nav li {
+  padding-right: 1.3em;
+  list-style: none;
+  font-family: var(--main-font);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-hoverImg {
+  position: relative;
+  width: 30px;
+  left: 67px;
+  top: 10px;
+}
+
+#skills.nav-hoverImg {
+  left: 40px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.sec-nav li:hover {
+  opacity: 60%;
+}
+
+.nav-mywork {
+  outline: none;
+  border: 3px solid var(--black);
+  box-shadow: var(--shadow-big);
+  font-family: var(--content-font);
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 1mm;
+  padding: 0.3em 2em;
+  background-color: var(--white);
+  transition: all 200ms ease-in-out;
+}
+.nav-mywork:hover {
+  cursor: pointer;
+  transform: translate3d(5px, 5px, 0px);
+  box-shadow: none;
+}
+/* About Me section */
+
+.windowbar {
+  display: flex;
+  align-items: center;
+  width: var(--section-size);
+  height: 30px;
+  border: 5.5px solid var(--black);
+  border-bottom: none;
+}
+
+.windowIcon {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border-radius: 50%;
+}
+
+.windowIcon.red {
+  margin-left: 1em;
+  background-color: var(--window-red);
+}
+
+.windowIcon.yellow {
+  margin-left: 0.5em;
+  background-color: var(--window-yellow);
+}
+
+.windowIcon.green {
+  margin-left: 0.5em;
+  background-color: var(--window-green);
+}
+
+.sec-aboutme {
+  width: var(--section-size);
+  border: 5.5px solid var(--black);
+  padding: 5em 3em 6em 3em;
+  text-align: left;
+}
+
+.about-descContainer {
+  width: 100%;
+  margin: 0;
+}
+
+.section-title {
+  font-family: var(--main-font);
 }

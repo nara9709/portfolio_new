@@ -4,7 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Just+Another+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/main.js" defer></script>
+
     <title>Work together with Nara!</title>
   </head>
-  <body></body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <body>
+    <!-- Navbar -->
+    <section class="sec-nav">
+      <div class="nav-titleContainer">
+        <span class="nav-title left">Work</span>
+        <span class="nav-title right">Together</span>
+      </div>
+      <nav>
+        <ul>
+          <li
+            class="nav-menu aboutme"
+            onmouseover="toggleHidden('aboutme')"
+            onmouseout="toggleHidden('aboutme')"
+          >
+            <img
+              id="aboutme"
+              class="nav-hoverImg hidden"
+              src="/contents/nav-hover.png"
+            />
+            About Me
+          </li>
+          <li
+            class="nav-menu skills"
+            onmouseover="toggleHidden('skills')"
+            onmouseout="toggleHidden('skills')"
+          >
+            <img
+              id="skills"
+              class="nav-hoverImg hidden"
+              src="/contents/nav-hover.png"
+            />Skills
+          </li>
+          <li
+            class="nav-menu testimonials"
+            onmouseover="toggleHidden('testimonials')"
+            onmouseout="toggleHidden('testimonials')"
+          >
+            <img
+              id="testimonials"
+              class="nav-hoverImg hidden"
+              src="/contents/nav-hover.png"
+            />Testimonials
+          </li>
+        </ul>
+        <button class="nav-mywork">My Work</button>
+        <div class="nav-navIconBox">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+      </nav>
+    </section>
+
+    <!-- About Me -->
+    <div class="windowbar">
+      <div class="windowIcon red"></div>
+      <div class="windowIcon yellow"></div>
+      <div class="windowIcon green"></div>
+    </div>
+
+    <section class="sec-aboutme">
+      <div class="about-descContainer">
+        <div class="section-title">
+          <h1>#About Me</h1>
+        </div>
+      </div>
+      <div class="about-avatar">
+        <img src="" alt="" />
+      </div>
+    </section>
+  </body>
 </html>
