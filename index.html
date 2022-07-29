@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +28,7 @@
     <script src="/main.js" defer></script>
 
     <title>Work together with Nara!</title>
+    <link rel="icon" href="contents/logo/Artboard 1.png" />
   </head>
   <script
     type="module"
@@ -36,45 +42,13 @@
     <!-- Navbar -->
     <section class="sec-nav">
       <div class="nav-titleContainer">
-        <span class="nav-title left">Work</span>
-        <span class="nav-title right">Together</span>
+        <h1 class="nav-title left">Hello World!</h1>
       </div>
       <nav>
         <ul>
-          <li
-            class="nav-menu aboutme"
-            onmouseover="toggleHidden('aboutme')"
-            onmouseout="toggleHidden('aboutme')"
-          >
-            <img
-              id="aboutme"
-              class="nav-hoverImg hidden"
-              src="/contents/nav-hover.png"
-            />
-            About Me
-          </li>
-          <li
-            class="nav-menu skills"
-            onmouseover="toggleHidden('skills')"
-            onmouseout="toggleHidden('skills')"
-          >
-            <img
-              id="skills"
-              class="nav-hoverImg hidden"
-              src="/contents/nav-hover.png"
-            />Skills
-          </li>
-          <li
-            class="nav-menu testimonials"
-            onmouseover="toggleHidden('testimonials')"
-            onmouseout="toggleHidden('testimonials')"
-          >
-            <img
-              id="testimonials"
-              class="nav-hoverImg hidden"
-              src="/contents/nav-hover.png"
-            />Testimonials
-          </li>
+          <li class="nav-menu aboutme">About Me</li>
+          <li class="nav-menu skills">Skills</li>
+          <li class="nav-menu testimonials">Testimonials</li>
         </ul>
         <button class="nav-mywork">My Work</button>
         <div class="nav-navIconBox">
@@ -85,20 +59,74 @@
 
     <!-- About Me -->
     <div class="windowbar">
-      <div class="windowIcon red"></div>
-      <div class="windowIcon yellow"></div>
-      <div class="windowIcon green"></div>
+      <div class="windowIcon wrapper">
+        <div class="windowIcon red"></div>
+        <div class="windowIcon yellow"></div>
+        <div class="windowIcon green"></div>
+      </div>
+      <div class="contact">
+        <a
+          href="https://www.linkedin.com/in/nara-lee-05ba8a15a/"
+          target="_blank"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a
+          href="https://github.com/nara9709?tab=overview&from=2022-07-01&to=2022-07-27"
+          target="_blank"
+        >
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </div>
     </div>
 
     <section class="sec-aboutme">
       <div class="about-descContainer">
-        <div class="section-title">
-          <h1>#About Me</h1>
+        <div class="aboutme-highlighter"></div>
+        <p class="section-title">#AboutMe</p>
+        <h1>I'm Nara Lee</h1>
+        <h2 class="rotatingText">
+          Who is a
+          <p class="brackets">[</p>
+          <span class="rotatingText-adjective">Creactive</span>
+          <span class="rotatingText-adjective">Fast</span>
+          <span class="rotatingText-adjective">Hard Working</span>
+          <p class="brackets end">]</p>
+        </h2>
+        <p class="sectionContentText">Developer</p>
+
+        <p class="aboutme-introduction">
+          I am creating a web and application for users, not is easy to
+          create.<br />
+          My goal is one, building the web that people love.
+        </p>
+
+        <div class="aboutme-college">
+          <img
+            src="./contents/logo/college_logo.png"
+            alt="fanshawe_college_logo"
+          />
+          <p>Diploma of Internet <br />Applications and Web Deveoplment</p>
         </div>
       </div>
+
       <div class="about-avatar">
-        <img src="" alt="" />
+        <img src="./contents/avatar.JPG" alt="avatar" />
       </div>
     </section>
+
+    <!-- Yellow Banner -->
+    <div class="scrolling-limit">
+      <div class="scrolling">
+        Hello YOU! Work Together with me 🫰 Hello YOU! Work Together with me 🫰
+        Hello YOU! Work Together with me 🫰 Hello YOU! Work Together with me 🫰
+        Hello YOU! Work Together with me 🫰 Hello YOU! Work Together with me 🫰
+        Hello YOU! Work Together with me 🫰 Hello YOU! Work Together with me 🫰
+        Hello YOU! Work Together with me 🫰 Hello YOU! Work Together with me 🫰
+        Hello YOU! Work Together with me 🫰 Hello YOU! Work Together with me 🫰
+        Hello YOU! Work Together with me 🫰 Hello YOU! Work Together with me 🫰
+        Hello YOU! Work Together with me 🫰 Hello YOU! Work Together with me 🫰
+      </div>
+    </div>
   </body>
 </html>
