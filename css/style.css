@@ -19,12 +19,19 @@ ONT SIZE SYSTEM (px)
   --main-yellow: #f9f9c5;
   --point-yellow: #d5fe77;
   --point-green: #39f077;
+  --point-peach: #f37878;
 
   --window-red: #e15750;
   --window-yellow: #eeb335;
   --window-green: #66c03f;
 
   --banner-yellow: #f4f769;
+
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
 
   /* Shadow */
   --shadow: 4px 4px 0px -1px #000000;
@@ -144,19 +151,21 @@ section {
   font-family: var(--main-font);
   font-size: 1.5rem;
   cursor: pointer;
+  z-index: 1;
 }
 
 .sec-nav li:after {
   content: '';
   position: absolute;
-  width: 80%;
+  width: 90%;
   transform: scaleX(0);
   height: 15px;
-  bottom: 6px;
-  left: 0;
-  background-color: rgba(243, 120, 120, 70%);
+  bottom: 2px;
+  left: -10px;
+  background-color: #9de28a9a;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+  z-index: -1;
 }
 
 .sec-nav li:hover:after {
@@ -498,7 +507,6 @@ div.scrolling {
 .skills-container {
   width: 30%;
   height: 300px;
-  background-color: #66c03f;
   margin-right: 1em;
 }
 
@@ -514,11 +522,70 @@ div.scrolling {
 }
 
 .skills-container ion-icon {
-  font-size: 5em;
+  font-size: 4em;
+  transition: color 250ms ease-in-out;
 }
 
-.skills-lang {
-  font-family: var(--content-font);
-  font-size: 1.5em;
-  font-weight: 100;
+.skills-container ion-icon:hover {
+  transform: scale(1.1);
+  color: var(--point-peach);
+}
+
+.skills-container p {
+  padding: 0.5rem 1rem;
+  font-family: var(--content-font-lignt);
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.skills-container img {
+  width: 4em;
+}
+
+#skillBarContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #e15750;
+}
+
+#skillBarContainer span {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+.skill_bar {
+  position: relative;
+  background-color: #39f077;
+  height: 15em;
+  width: 3rem;
+}
+
+.skill_value.html {
+  position: absolute;
+  bottom: 0;
+  transform: rotateX(180deg);
+  background-color: #eeb335;
+  height: 99%;
+  width: 3rem;
+
+  animation-duration: 3s;
+  animation-name: html;
+}
+
+@keyframes html {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 99%;
+  }
 }
