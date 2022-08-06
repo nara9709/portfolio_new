@@ -506,12 +506,8 @@ div.scrolling {
 
 .skills-container {
   width: 30%;
-  height: 300px;
+  height: 150px;
   margin-right: 1em;
-}
-
-.skills-container.node {
-  margin-right: 0;
 }
 
 .skills-toolContainer {
@@ -523,12 +519,6 @@ div.scrolling {
 
 .skills-container ion-icon {
   font-size: 4em;
-  transition: color 250ms ease-in-out;
-}
-
-.skills-container ion-icon:hover {
-  transform: scale(1.1);
-  color: var(--point-peach);
 }
 
 .skills-container p {
@@ -544,9 +534,12 @@ div.scrolling {
 }
 
 #skillBarContainer {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 70%;
   height: 100%;
-  background-color: #e15750;
 }
 
 #skillBarContainer span {
@@ -559,27 +552,54 @@ div.scrolling {
   flex-direction: column;
   justify-self: center;
   align-items: center;
+  margin-right: 2rem;
+}
+
+.skill span {
+  font-family: var(--content-font-lignt);
 }
 
 .skill_bar {
   position: relative;
-  background-color: #39f077;
+  background-color: var(--banner-yellow);
+  border-radius: 5px;
   height: 15em;
   width: 3rem;
 }
 
-.skill_value.html {
+.skill_value {
   position: absolute;
   bottom: 0;
   transform: rotateX(180deg);
-  background-color: #eeb335;
-  height: 99%;
+  background-color: var(--color-primary);
   width: 3rem;
-
   animation-duration: 3s;
-  animation-name: html;
 }
 
+.skill_value.html {
+  animation-name: html;
+  height: 99%;
+}
+
+.skill_value.css {
+  animation-name: css;
+  height: 90%;
+}
+
+.skill_value.js {
+  animation-name: js;
+  height: 75%;
+}
+
+.skill_value.react {
+  animation-name: react;
+  height: 60%;
+}
+
+.skill_value.ts {
+  animation-name: ts;
+  height: 40%;
+}
 @keyframes html {
   from {
     height: 0;
@@ -587,5 +607,77 @@ div.scrolling {
 
   to {
     height: 99%;
+  }
+}
+
+@keyframes css {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 90%;
+  }
+}
+
+@keyframes js {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 75%;
+  }
+}
+
+@keyframes react {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 60%;
+  }
+}
+
+@keyframes ts {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 40%;
+  }
+}
+
+#illustration_skills {
+  position: relative;
+  left: -240px;
+  top: -280px;
+}
+
+#illustration_computer {
+  width: 250px;
+  position: relative;
+  top: -40px;
+  left: -290px;
+}
+
+#illustration_background {
+  width: 350px;
+}
+
+.illustration_start {
+  animation-name: star_big;
+  animation-duration: 3s;
+}
+
+@keyframes star_big {
+  from {
+    transform: rotate(20deg);
+  }
+
+  to {
+    transform: rotate(-20deg);
   }
 }
