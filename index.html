@@ -51,17 +51,17 @@
   ></script>
   <body>
     <!-- Navbar -->
-    <section class="sec-nav">
+    <section id="sec-nav">
       <div class="nav-titleContainer">
         <h1 class="nav-title left">Hello World!</h1>
       </div>
       <nav>
         <ul>
-          <li class="nav-menu aboutme">About Me</li>
-          <li class="nav-menu skills">Skills</li>
-          <li class="nav-menu testimonials">Testimonials</li>
+          <li class="nav-menu aboutme" data-link="#aboutme">About Me</li>
+          <li class="nav-menu skills" data-link="#skills">Skills</li>
+          <li class="nav-menu testimonials" data-link="#testimonials">Testimonials</li>
         </ul>
-        <button class="nav-mywork">My Work</button>
+        <button class="nav-mywork" data-link="#mywork">My Work</button>
         <div class="nav-navIconBox">
           <ion-icon name="menu-outline"></ion-icon>
         </div>
@@ -96,20 +96,20 @@
         <div class="aboutme-highlighter"></div>
         <p class="section-title">#AboutMe</p>
         <h1>I'm Nara Lee</h1>
-        <h2 class="rotatingText">
+        <!-- <h2 class="rotatingText">
           Who is a
           <p class="brackets">[</p>
           <span class="rotatingText-adjective">Creactive</span>
           <span class="rotatingText-adjective">Fast</span>
           <span class="rotatingText-adjective">Hard Working</span>
           <p class="brackets end">]</p>
-        </h2>
-        <p class="sectionContentText">Developer</p>
+        </h2> -->
+        <p class="sectionContentText">Junior Developer</p>
 
         <p class="aboutme-introduction">
           I am creating a web and application for users, not is easy to
           create.<br />
-          My goal is one, building the web that people love.
+          My goal is one, building the web that people love. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorem voluptatum cumque voluptas aspernatur officia assumenda blanditiis quo corporis animi deserunt officiis necessitatibus delectus aut, est nulla quibusdam molestiae beatae.
         </p>
 
         <div class="aboutme-college">
@@ -247,6 +247,7 @@
   
     </section>
 
+    <!-- My Work -->
     <section id="sec-mywork">
       <p class="mywork-title">#My Work</p>
       <div class="mywork-highlighter"></div>
@@ -254,7 +255,7 @@
         <li>
           <div class="mywork-projectContainer first">
             <img class="findCarrotImg" src="./contents/findCarrot.png" alt="find carrot image" > 
-            <div class="mywork-projectDescContainer">
+            <div class="mywork-projectDescContainer first">
               <span>HTML CSS JavaScript</span>
               <h3>Find Carrot Game</h3>
 
@@ -275,7 +276,7 @@
           <div class="mywork-projectContainer second">
           
             <div class="mywork-projectDescContainer second">
-              <span>HTML CSS JavaScript</span>
+              <span>React.js Firebase</span>
               <h3>Find Carrot Game</h3>
 
               <p> Game made by vanlia JavaScript <br>
@@ -286,11 +287,55 @@
                 </div>
 
             </div>
-            <img class="findCarrotImg" src="./contents/findCarrot.png" alt="find carrot image"> 
+            <img class="findCarrotImg second" src="./contents/findCarrot.png" alt="find carrot image"> 
           </div>
          
         </li>
       </ul>
+
+    </section>
+
+    <!-- Testimonials -->
+    <section id="sec-testimonials">
+      <h1 class="testimonials-title">#Testimonials</h1>
+      <div class="testimonials-highlighter"></div>
+
+      <div class="testimonials-desc first">
+        <img class="testimonialsImg" src="./contents/testimonialsSecond.png" alt="testimonials">
+        <div class="testimonials-text first">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam rerum minus esse quisquam quos fuga deserunt aut! Perferendis natus quaerat velit dolore hic facilis, similique in, porro ipsam, minus iusto
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam rerum minus esse quisquam quos fuga deserunt aut! Perferendis natus quaerat velit dolore hic facilis, similique in, porro ipsam, minus iusto 
+          </p>
+          <br>
+          <p > <span class="testimonials-text-name">Noah </span>  <span>/ Professor</span></p>
+        </div>
+      </div>
+      <div class="testimonials-desc second">
+        <div class="testimonials-text second">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam rerum minus esse quisquam quos fuga deserunt aut! Perferendis natus quaerat velit dolore hic facilis, similique in, porro ipsam, minus iustoLorem ipsum dolor sit amet, consectetur adipisicing elit. Quam rerum minus esse quisquam quos fuga deserunt aut! Perferendis natus quaerat velit dolore hic facilis, similique in, porro ipsam, minus iusto</p>
+        <br>
+        <p > <span class="testimonials-text-name">Noah </span>  <span>/ Professor</span></p>
+        </div>
+        <img class="testimonialsImg" src="./contents/testimonialsFirst.png" alt="testimonials">
+      </div>
+
+    </section>
+
+    <section id="sec-contact">
+      <h1>Let's talk </h1>
+      <h2>Worldkr19@gmail.com</h2>
+      <span> <a
+        href="https://www.linkedin.com/in/nara-lee-05ba8a15a/"
+        target="_blank"
+      >
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <a
+        href="https://github.com/nara9709?tab=overview&from=2022-07-01&to=2022-07-27"
+        target="_blank"
+      >
+        <ion-icon name="logo-github"></ion-icon>
+      </a> </span>
 
     </section>
   </body>
