@@ -595,27 +595,22 @@ div.scrolling {
 }
 
 .skill_value.html {
-  animation-name: html;
   height: 99%;
 }
 
 .skill_value.css {
-  animation-name: css;
   height: 90%;
 }
 
 .skill_value.js {
-  animation-name: js;
   height: 75%;
 }
 
 .skill_value.react {
-  animation-name: react;
   height: 60%;
 }
 
 .skill_value.ts {
-  animation-name: ts;
   height: 40%;
 }
 @keyframes html {
@@ -803,9 +798,8 @@ div.scrolling {
   cursor: pointer;
   position: relative;
   transition: top 300ms ease-in-out;
-  animation-name: fadeInLeft;
-  animation-duration: 400ms;
 }
+
 .findCarrotImg:hover {
   top: -10px;
 }
@@ -825,8 +819,21 @@ div.scrolling {
   box-shadow: 4px 8px 8px -7px rgba(0, 0, 0, 0.8);
 }
 
+.findCarrotImg.first {
+  animation-duration: 400ms;
+}
+
+.findCarrotImg.second {
+  animation-duration: 400ms;
+}
+
 .mywork-projectDescContainer.first {
-  animation-name: fadeInRight;
+  animation-duration: 400ms;
+}
+
+.mywork-projectDescContainer.second {
+  left: 100px;
+  z-index: 1;
   animation-duration: 400ms;
 }
 
@@ -863,18 +870,6 @@ div.scrolling {
 
 #sec-mywork li {
   list-style: none;
-}
-
-.mywork-projectDescContainer.second {
-  left: 100px;
-  z-index: 1;
-  animation-name: fadeInLeft;
-  animation-duration: 400ms;
-}
-
-.findCarrotImg.second {
-  animation-name: fadeInRight;
-  animation-duration: 400ms;
 }
 
 @keyframes fadeInLeft {
