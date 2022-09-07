@@ -14,6 +14,12 @@ function hiddenBurger() {
   }
 }
 
+function showBurger() {
+  if (screen.width > 768) {
+    burgerMenu.classList.remove('hidden');
+  }
+}
+
 hiddenBurger();
 
 // If user click language button, change language setting
