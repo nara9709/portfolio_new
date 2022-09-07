@@ -1038,29 +1038,46 @@ div.scrolling {
   /* Nav bar */
   nav {
     font-size: 1.3rem;
-    position: fixed;
     background-color: var(--window-yellow);
     width: var(--section-size);
     padding: 1em;
-    z-index: 1;
+    z-index: 2;
     height: 300px;
     text-align: center;
     flex-direction: column;
     transition: all 200ms ease-in-out;
   }
 
-  #nav-burgermenu {
-    z-index: 1;
-    font-size: 4.5rem;
+  #sec-nav.scrolling {
+    height: 100px;
+    padding-bottom: 0;
+    background-color: var(--main-yellow);
     position: fixed;
+    top: 0;
+    z-index: 2;
+    transition: all 100ms ease-in-out;
+  }
+
+  .nav-titleContainer h1 {
+    margin-top: 0.4em;
+  }
+
+  #nav-burgermenu {
+    z-index: 2;
+    font-size: 4.5rem;
     right: 50px;
   }
 
+  #nav-burgermenu .hidden {
+    display: none;
+  }
+
   #nav-closemenu {
-    z-index: 1;
+    z-index: 2;
     font-size: 4.5rem;
     position: fixed;
-    right: 50px;
+    right: 45px;
+    top: 15px;
   }
 
   #lang-icon {
@@ -1077,6 +1094,10 @@ div.scrolling {
     line-height: 3rem;
     font-size: 1.5rem;
     padding: 0;
+  }
+
+  #sec-nav .nav.hidden {
+    display: none;
   }
 
   #sec-aboutme {
@@ -1138,9 +1159,6 @@ div.scrolling {
   }
 }
 
-#nav-closemenu .hidden {
-  display: none;
-}
-#sec-nav .hidden {
+#nav-closemenu.hidden {
   display: none;
 }

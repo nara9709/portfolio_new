@@ -2,28 +2,41 @@
 
 let lang = 'korean';
 
-const burgerMenu = document.querySelector('#nav-burgermenu');
+const burgerMenu = document.querySelector('  #nav-burgermenu');
 const closeMenu = document.querySelector('#nav-closemenu');
 const nav = document.querySelector('nav');
+const langIcon = document.getElementById('lang-icon');
 
-function hiddenBurger() {
+function toggleBurger() {
+  // In screen is widder than 768px, hide burger menu
   if (screen.width > 768) {
     burgerMenu.classList.add('hidden');
 
-    nav.classList.remove('hidden');
-  }
-}
-
-function showBurger() {
-  if (screen.width > 768) {
+    // If screen is smaller than 768px, show burger menu
+  } else if (screen.width < 768) {
     burgerMenu.classList.remove('hidden');
+    document.querySelector('nav').classList.add('hidden');
   }
 }
 
-hiddenBurger();
+toggleBurger();
+
+window.onresize = toggleBurger;
 
 // If user click language button, change language setting
-document.getElementById('lang-icon').addEventListener('click', () => {
+langIcon.addEventListener('click', () => {
+  if (lang === 'korean') {
+    lang = 'english';
+
+    changeLangContent();
+  } else {
+    lang = 'korean';
+
+    changeLangContent();
+  }
+});
+
+langIcon.addEventListener('touchstart', () => {
   if (lang === 'korean') {
     lang = 'english';
 
@@ -51,14 +64,21 @@ function changeLangContent() {
     aboutme.innerHTML = introductionKr;
   }
 }
-
-// Handle click event on Burger menu icon
-burgerMenu.addEventListener('click', () => {
+function toggleMenu() {
   document.querySelector('nav').classList.toggle('hidden');
 
   burgerMenu.classList.toggle('hidden');
 
   closeMenu.classList.toggle('hidden');
+}
+
+// Handle click event on Burger menu icon
+burgerMenu.addEventListener('click', () => {
+  toggleMenu();
+});
+
+burgerMenu.addEventListener('touchstart', () => {
+  toggleMenu();
 });
 
 // Handle click event on close menu icon
@@ -71,6 +91,13 @@ closeMenu.addEventListener('click', () => {
   closeMenu.classList.toggle('hidden');
 });
 
+closeMenu.addEventListener('touchstart', () => {
+  document.querySelector('nav').classList.toggle('hidden');
+
+  burgerMenu.classList.toggle('hidden');
+
+  closeMenu.classList.toggle('hidden');
+});
 // Make navbar transparent when it is on the top
 // const navbar = document.querySelector('#sec-nav');
 // const navbarHeight = navbar.getBoundingClientRect().height;
@@ -144,4 +171,20 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
   //   selectNavItem(navItems[sectionIds.indexOf(selector)]);
+
+  toggleMenu();
 }
+
+window.addEventListener('scroll', () => {
+  if (
+    document.body.scrollTop > 120 ||
+    document.documentElement.scrollTop > 120
+  ) {
+    document.querySelector('#sec-nav').classList.add('scrolling');
+  } else if (
+    document.body.scrollTop < 120 ||
+    document.documentElement.scrollTop < 120
+  ) {
+    document.querySelector('#sec-nav').classList.remove('scrolling');
+  }
+});
