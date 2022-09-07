@@ -299,6 +299,7 @@ a {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
+  line-height: 1.4em;
 }
 
 .section-title {
@@ -826,10 +827,10 @@ div.scrolling {
   width: 40%;
   height: 200px;
   position: relative;
-  top: 140px;
+  top: 200px;
   left: -100px;
-  background-color: rgb(249, 203, 103);
-  border-radius: 5px;
+  background-color: rgb(255 255 255 / 75%);
+  border-radius: 30px;
   box-shadow: 4px 8px 8px -7px rgba(0, 0, 0, 0.8);
 }
 
@@ -874,12 +875,12 @@ div.scrolling {
 
 .mywork-projectDescContainer ion-icon {
   font-size: 1.8rem;
-  transition: color 200ms ease-in;
+  transition: color 100ms ease-in;
 }
 
 .mywork-projectDescContainer ion-icon:hover {
   cursor: pointer;
-  color: var(--white);
+  color: var(--window-yellow);
 }
 
 #sec-mywork li {
@@ -1012,11 +1013,6 @@ div.scrolling {
   transform: scale(1.2);
 }
 
-/* Hidden */
-.hidden {
-  display: none;
-}
-
 @media screen and (max-width: 768px) {
   :root {
     /* Font size */
@@ -1039,9 +1035,53 @@ div.scrolling {
     width: var(--section-size);
   }
 
+  /* Nav bar */
+  nav {
+    font-size: 1.3rem;
+    position: fixed;
+    background-color: var(--window-yellow);
+    width: var(--section-size);
+    padding: 1em;
+    z-index: 1;
+    height: 300px;
+    text-align: center;
+    flex-direction: column;
+    transition: all 200ms ease-in-out;
+  }
+
+  #nav-burgermenu {
+    z-index: 1;
+    font-size: 4.5rem;
+    position: fixed;
+    right: 50px;
+  }
+
+  #nav-closemenu {
+    z-index: 1;
+    font-size: 4.5rem;
+    position: fixed;
+    right: 50px;
+  }
+
+  #lang-icon {
+    font-size: 3rem;
+    position: absolute;
+    right: 150px;
+  }
+
+  #sec-nav ul {
+    flex-direction: column;
+  }
+
+  #sec-nav li {
+    line-height: 3rem;
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
   #sec-aboutme {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .about-avatar {
@@ -1054,7 +1094,7 @@ div.scrolling {
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    margin-bottom: 2rem;
+    margin-top: 2em;
   }
 
   #illustration_skills {
@@ -1096,4 +1136,11 @@ div.scrolling {
   .skill span {
     font-size: 1rem;
   }
+}
+
+#nav-closemenu .hidden {
+  display: none;
+}
+#sec-nav .hidden {
+  display: none;
 }

@@ -53,12 +53,10 @@
   <body>
     <!-- Navbar -->
     <section id="sec-nav">
-
-
       <div class="nav-titleContainer">
         <h1 class="nav-title left">Hello World!</h1>
       </div>
-      <nav>
+      <nav class="nav hidden" >
         <ul>
           <li class="nav-menu aboutme" data-link="#aboutme">About Me</li>
           <li class="nav-menu skills" data-link="#skills">Skills</li>
@@ -69,6 +67,8 @@
           <ion-icon name="menu-outline"></ion-icon>
         </div>
       </nav>
+      <ion-icon name="menu-outline" id="nav-burgermenu"></ion-icon>
+      <ion-icon name="close-outline" id="nav-closemenu" class="nav-closemenu hidden"></ion-icon>
       <ion-icon id="lang-icon" name="language-outline"></ion-icon>
     </section>
 
@@ -100,19 +100,10 @@
         <div class="aboutme-highlighter"></div>
         <p class="section-title">#AboutMe</p>
         <h1>I'm Nara Lee</h1>
-        <!-- <h2 class="rotatingText">
-          Who is a
-          <p class="brackets">[</p>
-          <span class="rotatingText-adjective">Creactive</span>
-          <span class="rotatingText-adjective">Fast</span>
-          <span class="rotatingText-adjective">Hard Working</span>
-          <p class="brackets end">]</p>
-        </h2> -->
         <p class="sectionContentText">Junior Developer</p>
 
         <p class="aboutme-introduction">
-          안녕하세요, 신입 front-end 개발자 이나라입니다.
-          <br> 기능을 그저 구현 하는것에 초점을 맞추는것이 아닌 필요한 기능을 <strong> '어떻게' </strong> 구현 할것이며 <strong>'왜'</strong> 이렇게 구현 해야만 하는지에 초점을 맞춰 개발하려고 노력하고 있습니다. <br> <br> 또한 무수히 쏟아지는 새로운 언어와 라이브러리, 기능들을 열린 마음으로 배워보려고 하고 있지만 그와 동시에 지금 내가 배우고 있는 것이 내게 필요한 이유를 확실히 하려고 하는 <br><strong> '이유있는 개발자'</strong>를 모토로 개발을 해왔습니다.
+기능을 그저 구현 하는것에 초점을 맞추는것이 아닌 필요한 기능을 <strong> '어떻게' </strong> 구현 할것이며 <strong>'왜'</strong> 이렇게 구현 해야만 하는지에 초점을 맞춰 개발하려고 노력하고 있습니다. <br> <br> 무수히 쏟아지는 새로운 언어와 라이브러리, 기능들을 열린 마음으로 배워보려고 하고 있지만 그와 동시에 지금 내가 배우고 있는 것이 내게 필요한 이유를 확실히 하려고 하는 <br><strong> '이유있는 개발자'</strong>를 모토로 삼으며 개발하고 있습니다.
        
         </p>
 
@@ -258,16 +249,16 @@
       <ul>
         <li>
           <div class="mywork-projectContainer first">
-            <img class="findCarrotImg first" src="./contents/findCarrot.png" alt="find carrot image" > 
+            <img class="findCarrotImg first" src="./contents/youtube.png" alt="find carrot image" > 
             <div class="mywork-projectDescContainer first">
-              <span>HTML CSS JavaScript</span>
-              <h3>Find Carrot Game</h3>
+              <span>React</span>
+              <h3>Youtube clone site </h3>
 
-              <p> Game made by vanlia JavaScript <br>
-                Learn about JavaScript DOM and eventhandler functions </p>
+              <p> Youtube clone project by React <br>
+                Learned about using web APIs and how to make highly reusable components </p>
                 <div>
                   <a target="_blank" href="https://github.com/nara9709/Find_carrot_game"><ion-icon name="logo-github"></ion-icon></a>
-                <a target="_blank" href="https://nara9709.github.io/Find_carrot_game/
+                <a target="_blank" href="https://narayoutube.netlify.app/
                 "><ion-icon name="play-circle-outline"></ion-icon></a>
                 </div>
 
@@ -284,10 +275,11 @@
               <h3>Find Carrot Game</h3>
 
               <p> Game made by vanlia JavaScript <br>
-                Learn about JavaScript DOM and eventhandler functions </p>
+                Learned about DOM, how to control with nodes, event handler functions on JavaScript </p>
                 <div>
-                  <ion-icon name="logo-github"></ion-icon>
-                <ion-icon name="play-circle-outline"></ion-icon>
+                  <a target="_blank" href="https://github.com/nara9709/Find_carrot_game"><ion-icon name="logo-github"></ion-icon></a>
+                  <a target="_blank" href="https://nara9709.github.io/Find_carrot_game/
+                  "><ion-icon name="play-circle-outline"></ion-icon></a>
                 </div>
 
             </div>
