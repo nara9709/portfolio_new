@@ -1123,40 +1123,49 @@ div.scrolling {
   }
 
   #skillBarContainer {
-    left: 90px;
-  }
-
-  .skills-title,
-  .mywork-title,
-  .testimonials-title {
-    font-size: 3rem;
-  }
-
-  .skills-highlighter,
-  .mywork-highlighter,
-  .testimonials-highlighter {
-    top: -70px;
-  }
-
-  .skills-highlighter {
-    width: 25em;
-  }
-
-  .mywork-highlighter {
-    width: 30em;
-  }
-
-  .testimonials-highlighter {
-    width: 55em;
-  }
-
-  .skills-langContainer p {
-    font-size: 0.8rem;
+    left: 110px;
   }
 
   .skill span {
     font-size: 1rem;
   }
+
+  .skill_bar {
+    width: 90px;
+    height: 180px;
+  }
+
+  .skill_value {
+    width: 90px;
+  }
+}
+
+.skills-title,
+.mywork-title,
+.testimonials-title {
+  font-size: 3rem;
+}
+
+.skills-highlighter,
+.mywork-highlighter,
+.testimonials-highlighter {
+  top: -70px;
+}
+
+.skills-highlighter {
+  width: 25em;
+}
+
+.mywork-highlighter {
+  width: 30em;
+}
+
+.testimonials-highlighter {
+  width: 55em;
+}
+
+.skills-langContainer p {
+  font-size: 0.8rem;
 }
 
 #nav-closemenu.hidden {
