@@ -1,19 +1,21 @@
 'use strict';
 
-let lang = 'korean';
+let lang = 'english';
 
 const burgerMenu = document.querySelector('  #nav-burgermenu');
 const closeMenu = document.querySelector('#nav-closemenu');
 const nav = document.querySelector('nav');
 const langIcon = document.getElementById('lang-icon');
 
+const viewportWidth = document.documentElement.clientWidth;
+
 function toggleBurger() {
   // In screen is widder than 768px, hide burger menu
-  if (screen.width > 768) {
+  if (viewportWidth > 768) {
     burgerMenu.classList.add('hidden');
 
     // If screen is smaller than 768px, show burger menu
-  } else if (screen.width < 768) {
+  } else if (viewportWidth < 768) {
     burgerMenu.classList.remove('hidden');
     document.querySelector('nav').classList.add('hidden');
   }
@@ -53,10 +55,10 @@ function changeLangContent() {
   let aboutme = document.querySelector('.aboutme-introduction');
 
   if (lang === 'english') {
-    const intrductionEng = `I am creating a web and application for users, not is easy tocreate.
-    My goal is one, building the web that people love. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorem voluptatum cumque voluptas aspernatur officia assumenda blanditiis quo corporis animi deserunt officiis necessitatibus delectus aut, est nulla quibusdam molestiae beatae.`;
+    const intrductionEng = `Instead of just focusing on whether a function is working or not, I'm trying to develop focusing on <strong>HOW</strong> and <strong>WHY</strong> I should implement like that. <br> <br>
+    In addition, I am willing to learn new languages, libraries, and framworks, and at the same time, I am trying to be a developer who knows why I have to learn this.`;
 
-    aboutme.innerText = intrductionEng;
+    aboutme.innerHTML = intrductionEng;
   } else {
     const introductionKr = `그저 기능 구현에 초점을 맞추는것이 아닌 필요한 기능을 <strong> '어떻게' </strong> 구현 할것이며 <strong>'왜'</strong> 이렇게 구현 해야만 하는지에 초점을 맞춰 개발하려고 노력하고 있습니다. <br> <br> 또한 무수히 쏟아지는 새로운 언어와 라이브러리, 기능들을 열린 마음으로 배워보려는 동시에 왜 내가 이것을 배워야 하는지 알고 있는 <strong> '이유있는 개발자'</strong>를 모토로 삼고있습니다.
  `;
@@ -170,20 +172,20 @@ btnMywork.addEventListener('click', () => {
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
-  //   selectNavItem(navItems[sectionIds.indexOf(selector)]);
 
   toggleMenu();
 }
 
 window.addEventListener('scroll', () => {
+  const navHeight = 30;
   if (
-    document.body.scrollTop > 120 ||
-    document.documentElement.scrollTop > 120
+    document.body.scrollTop > navHeight ||
+    document.documentElement.scrollTop > navHeight
   ) {
     document.querySelector('#sec-nav').classList.add('scrolling');
   } else if (
-    document.body.scrollTop < 120 ||
-    document.documentElement.scrollTop < 120
+    document.body.scrollTop < navHeight ||
+    document.documentElement.scrollTop < navHeight
   ) {
     document.querySelector('#sec-nav').classList.remove('scrolling');
   }

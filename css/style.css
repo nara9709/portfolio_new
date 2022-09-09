@@ -1037,6 +1037,7 @@ div.scrolling {
 
   /* Nav bar */
   nav {
+    position: fixed;
     font-size: 1.3rem;
     background-color: var(--window-yellow);
     width: var(--section-size);
@@ -1068,22 +1069,24 @@ div.scrolling {
     right: 50px;
   }
 
-  #nav-burgermenu .hidden {
-    display: none;
+  .nav-closemenu {
+    z-index: 2;
+    font-size: 4rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
-  #nav-closemenu {
-    z-index: 2;
-    font-size: 4.5rem;
-    position: fixed;
-    right: 45px;
-    top: 15px;
+  #nav-burgermenu:hover,
+  .nav-closemenu:hover {
+    cursor: pointer;
+    opacity: 30%;
   }
 
   #lang-icon {
     font-size: 3rem;
-    position: absolute;
     right: 150px;
+    margin-bottom: 0;
   }
 
   #sec-nav ul {
@@ -1138,36 +1141,73 @@ div.scrolling {
   .skill_value {
     width: 90px;
   }
-}
+  .testimonials-text {
+    margin-bottom: 2em;
+  }
 
-.skills-title,
-.mywork-title,
-.testimonials-title {
-  font-size: 3rem;
-}
+  .testimonials-text p {
+    font-size: 1.5rem;
+  }
 
-.skills-highlighter,
-.mywork-highlighter,
-.testimonials-highlighter {
-  top: -70px;
-}
+  .skills-title,
+  .mywork-title,
+  .testimonials-title {
+    font-size: 3rem;
+  }
 
-.skills-highlighter {
-  width: 25em;
-}
+  .skills-highlighter,
+  .mywork-highlighter,
+  .testimonials-highlighter {
+    top: -70px;
+  }
 
-.mywork-highlighter {
-  width: 30em;
-}
+  .skills-highlighter {
+    width: 25em;
+  }
 
-.testimonials-highlighter {
-  width: 55em;
-}
+  .mywork-highlighter {
+    width: 30em;
+  }
 
-.skills-langContainer p {
-  font-size: 0.8rem;
+  .mywork-projectContainer {
+    display: inline-block;
+  }
+
+  .mywork-projectDescContainer {
+    top: 0;
+    left: 0;
+    width: 80%;
+    margin: auto;
+  }
+
+  .mywork-projectContainer.second {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 7em;
+  }
+
+  .mywork-projectDescContainer.second {
+    left: 0;
+  }
+
+  .findCarrotImg {
+    margin: auto;
+    margin-top: 1em;
+  }
+
+  .testimonials-highlighter {
+    width: 55em;
+  }
+
+  .skills-langContainer p {
+    font-size: 0.8rem;
+  }
 }
 
 #nav-closemenu.hidden {
+  display: none;
+}
+
+#nav-burgermenu.hidden {
   display: none;
 }
