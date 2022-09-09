@@ -6,6 +6,7 @@ const burgerMenu = document.querySelector('  #nav-burgermenu');
 const closeMenu = document.querySelector('#nav-closemenu');
 const nav = document.querySelector('nav');
 const langIcon = document.getElementById('lang-icon');
+const arrowUpBtn = document.querySelector('.arrowUp');
 
 const viewportWidth = document.documentElement.clientWidth;
 
@@ -18,6 +19,7 @@ function toggleBurger() {
   } else if (viewportWidth < 768) {
     burgerMenu.classList.remove('hidden');
     document.querySelector('nav').classList.add('hidden');
+    arrowUpBtn.classList.add('hidden');
   }
 }
 
@@ -148,7 +150,11 @@ btnMywork.addEventListener('click', () => {
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
+  scrollTo.scrollIntoView({
+    behavior: 'smooth',
+    block: 'nearest',
+    inline: 'nearest',
+  });
 
   if (viewportWidth < 768) {
     toggleMenu();
@@ -162,10 +168,20 @@ window.addEventListener('scroll', () => {
     document.documentElement.scrollTop > navHeight
   ) {
     document.querySelector('#sec-nav').classList.add('scrolling');
+    document.querySelector('.arrowUp').classList.remove('hidden');
   } else if (
     document.body.scrollTop < navHeight ||
     document.documentElement.scrollTop < navHeight
   ) {
     document.querySelector('#sec-nav').classList.remove('scrolling');
+    document.querySelector('.arrowUp').classList.add('hidden');
   }
+});
+
+// Arrow up click event
+arrowUpBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 });
