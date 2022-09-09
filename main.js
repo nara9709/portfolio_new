@@ -8,15 +8,17 @@ const nav = document.querySelector('nav');
 const langIcon = document.getElementById('lang-icon');
 const arrowUpBtn = document.querySelector('.arrowUp');
 
+const maxWidth = 390;
+
 const viewportWidth = document.documentElement.clientWidth;
 
 function toggleBurger() {
-  // In screen is widder than 768px, hide burger menu
-  if (viewportWidth > 768) {
+  // In screen is widder than max width, hide burger menu
+  if (viewportWidth > maxWidth) {
     burgerMenu.classList.add('hidden');
 
-    // If screen is smaller than 768px, show burger menu
-  } else if (viewportWidth < 768) {
+    // If screen is smaller than max width, show burger menu
+  } else if (viewportWidth < maxWidth) {
     burgerMenu.classList.remove('hidden');
     document.querySelector('nav').classList.add('hidden');
     arrowUpBtn.classList.add('hidden');
@@ -156,7 +158,7 @@ function scrollIntoView(selector) {
     inline: 'nearest',
   });
 
-  if (viewportWidth < 768) {
+  if (viewportWidth < maxWidth) {
     toggleMenu();
   }
 }
