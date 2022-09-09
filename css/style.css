@@ -1202,6 +1202,10 @@ div.scrolling {
   .skills-langContainer p {
     font-size: 0.8rem;
   }
+
+  div.scrolling {
+    font-size: 3em;
+  }
 }
 
 #nav-closemenu.hidden {

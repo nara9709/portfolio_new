@@ -140,6 +140,18 @@ btnSkills.addEventListener('click', () => {
   skillTs.style.cssText += 'animation-name:ts;';
 });
 
+// About me btn
+const btnAboutme = document.querySelector('.nav-menu.aboutme');
+btnAboutme.addEventListener('click', () => {
+  scrollIntoView('#sec-aboutme');
+});
+
+// Testimonials
+const btnTestimonials = document.querySelector('.nav-menu.testimonials');
+btnTestimonials.addEventListener('click', () => {
+  scrollIntoView('#sec-testimonials');
+});
+
 // My Work Btn
 const btnMywork = document.querySelector('.nav-mywork');
 
@@ -173,7 +185,9 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 
-  toggleMenu();
+  if (viewportWidth < 768) {
+    toggleMenu();
+  }
 }
 
 window.addEventListener('scroll', () => {
