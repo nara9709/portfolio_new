@@ -1038,7 +1038,7 @@ div.scrolling {
 /* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 } */
 
-@media only screen and (max-width: 390px) {
+@media only screen and (min-width: 390px) {
   :root {
     /* Font size */
     --font-large: 30px;
@@ -1048,7 +1048,7 @@ div.scrolling {
     --font-micro: 12px;
 
     /* Width */
-    --section-size: 660px;
+    --section-size: 700px;
   }
 
   body {
