@@ -38,18 +38,6 @@ langIcon.addEventListener('click', () => {
   }
 });
 
-langIcon.addEventListener('touchstart', () => {
-  if (lang === 'korean') {
-    lang = 'english';
-
-    changeLangContent();
-  } else {
-    lang = 'korean';
-
-    changeLangContent();
-  }
-});
-
 function changeLangContent() {
   console.log(lang);
   let aboutme = document.querySelector('.aboutme-introduction');
@@ -79,10 +67,6 @@ burgerMenu.addEventListener('click', () => {
   toggleMenu();
 });
 
-burgerMenu.addEventListener('touchstart', () => {
-  toggleMenu();
-});
-
 // Handle click event on close menu icon
 
 closeMenu.addEventListener('click', () => {
@@ -92,25 +76,6 @@ closeMenu.addEventListener('click', () => {
 
   closeMenu.classList.toggle('hidden');
 });
-
-closeMenu.addEventListener('touchstart', () => {
-  document.querySelector('nav').classList.toggle('hidden');
-
-  burgerMenu.classList.toggle('hidden');
-
-  closeMenu.classList.toggle('hidden');
-});
-// Make navbar transparent when it is on the top
-// const navbar = document.querySelector('#sec-nav');
-// const navbarHeight = navbar.getBoundingClientRect().height;
-
-// document.addEventListener('scroll', () => {
-//   if (window.scrollY > navbarHeight) {
-//     navbar.classList.add('navbar--dark');
-//   } else {
-//     navbar.classList.remove('navbar--dark');
-//   }
-// });
 
 // Handle click on nav button
 // Skills Btn
