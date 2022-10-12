@@ -112,7 +112,7 @@ btnSkills.addEventListener('click', () => {
 // About me btn
 const btnAboutme = document.querySelector('.nav-menu.aboutme');
 btnAboutme.addEventListener('click', () => {
-  scrollIntoView('#sec-aboutme');
+  scrollIntoView('#sec-contact');
 });
 
 // Testimonials
