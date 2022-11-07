@@ -558,6 +558,8 @@ div.scrolling {
 }
 
 .skills-langContainer {
+  opacity: 0;
+  transition: 500ms;
   width: 100%;
   display: flex;
   align-items: center;
@@ -973,21 +975,14 @@ div.scrolling {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: 400ms;
 }
 
 .testimonials-text {
   padding: 2rem;
   background-color: var(--highlighter-yellow);
   border-radius: 10px;
-  animation-duration: 400ms;
-}
-
-.testimonials-text.first {
-  animation-name: fadeInLeft;
-}
-
-.testimonials-text.second {
-  animation-name: fadeInRight;
 }
 
 .testimonials-text #sec-testimonials p {

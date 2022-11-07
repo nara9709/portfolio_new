@@ -87,27 +87,47 @@ const btnSkills = document.querySelector('.nav-menu.skills');
 
 btnSkills.addEventListener('click', () => {
   scrollIntoView('#sec-skills');
-
-  const skillHtml = document.querySelector('.skill_value.html');
-
-  skillHtml.style.cssText += 'animation-name:html;';
-
-  const skillCss = document.querySelector('.skill_value.css');
-
-  skillCss.style.cssText += 'animation-name:css;';
-
-  const skillJs = document.querySelector('.skill_value.js');
-
-  skillJs.style.cssText += 'animation-name:js;';
-
-  const skillReact = document.querySelector('.skill_value.react');
-
-  skillReact.style.cssText += 'animation-name:react;';
-
-  const skillTs = document.querySelector('.skill_value.ts');
-
-  skillTs.style.cssText += 'animation-name:ts;';
 });
+
+// Skill languges observer and If this section is visible, add animation
+const skillsLangSec = document.querySelector('.skills-langContainer');
+
+let skillsLangObserver = new IntersectionObserver((e) => {
+  e.forEach((box) => {
+    if (box.isIntersecting) {
+      box.target.style.opacity = 1;
+    }
+  });
+});
+
+skillsLangObserver.observe(skillsLangSec);
+
+// Skill bar observer and If this section container is visible, add animations
+const skillsSec = document.querySelector('#skillBarContainer');
+
+let skillBarObserver = new IntersectionObserver((e) => {
+  e.forEach((box) => {
+    if (box.isIntersecting) {
+      const skillHtml = document.querySelector('.skill_value.html');
+
+      skillHtml.style.cssText += 'animation-name:html;';
+
+      const skillCss = document.querySelector('.skill_value.css');
+
+      skillCss.style.cssText += 'animation-name:css;';
+
+      const skillJs = document.querySelector('.skill_value.js');
+
+      skillJs.style.cssText += 'animation-name:js;';
+
+      const skillReact = document.querySelector('.skill_value.react');
+
+      skillReact.style.cssText += 'animation-name:react;';
+    }
+  });
+});
+
+skillBarObserver.observe(skillsSec);
 
 // About me btn
 const btnAboutme = document.querySelector('.nav-menu.aboutme');
@@ -126,29 +146,75 @@ const btnMywork = document.querySelector('.nav-mywork');
 
 btnMywork.addEventListener('click', () => {
   scrollIntoView('#sec-mywork');
-
-  setTimeout(() => {
-    const myWorkImgFirst = document.querySelector('.findCarrotImg.first');
-
-    myWorkImgFirst.style.cssText += 'animation-name: fadeInLeft;';
-
-    const myWorkImgSecond = document.querySelector('.findCarrotImg.second');
-
-    myWorkImgSecond.style.cssText += 'animation-name: fadeInRight;';
-
-    const myWorkDescFirst = document.querySelector(
-      '.mywork-projectDescContainer.first'
-    );
-
-    myWorkDescFirst.style.cssText += 'animation-name: fadeInRight;';
-
-    const myWorkDescSecond = document.querySelector(
-      '.mywork-projectDescContainer.second'
-    );
-
-    myWorkDescSecond.style.cssText += 'animation-name: fadeInLeft;';
-  }, 500);
 });
+
+// Work first observer and If this section container is visible, add animations
+const worksSecFirst = document.querySelector('.mywork-projectContainer.first');
+
+let workFirstObserver = new IntersectionObserver((e) => {
+  e.forEach((box) => {
+    if (box.isIntersecting) {
+      const myWorkImgFirst = document.querySelector('.findCarrotImg.first');
+
+      myWorkImgFirst.style.cssText += 'animation-name: fadeInLeft;';
+
+      const myWorkDescFirst = document.querySelector(
+        '.mywork-projectDescContainer.first'
+      );
+
+      myWorkDescFirst.style.cssText += 'animation-name: fadeInRight;';
+    }
+  });
+});
+
+workFirstObserver.observe(worksSecFirst);
+
+// Work second observer and If this section container is visible, add animations
+const worksSecond = document.querySelector('.mywork-projectContainer.second');
+
+let workSecondObserver = new IntersectionObserver((e) => {
+  e.forEach((box) => {
+    if (box.isIntersecting) {
+      const myWorkImgSecond = document.querySelector('.findCarrotImg.second');
+
+      myWorkImgSecond.style.cssText += 'animation-name: fadeInRight;';
+
+      const myWorkDescSecond = document.querySelector(
+        '.mywork-projectDescContainer.second'
+      );
+
+      myWorkDescSecond.style.cssText += 'animation-name: fadeInLeft;';
+    }
+  });
+});
+
+workSecondObserver.observe(worksSecond);
+
+// Testimonial first section observer and If this section is visible, add animation
+const testimonialsFirst = document.querySelector('.testimonials-desc.first');
+
+let testimonialsFirstObserver = new IntersectionObserver((e) => {
+  e.forEach((box) => {
+    if (box.isIntersecting) {
+      box.target.style.opacity = 1;
+    }
+  });
+});
+
+testimonialsFirstObserver.observe(testimonialsFirst);
+
+// Testimonial first section observer and If this section is visible, add animation
+const testimonialsSecond = document.querySelector('.testimonials-desc.second');
+
+let testimonialsSecondObserver = new IntersectionObserver((e) => {
+  e.forEach((box) => {
+    if (box.isIntersecting) {
+      box.target.style.opacity = 1;
+    }
+  });
+});
+
+testimonialsSecondObserver.observe(testimonialsSecond);
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
