@@ -102,33 +102,6 @@ let skillsLangObserver = new IntersectionObserver((e) => {
 
 skillsLangObserver.observe(skillsLangSec);
 
-// Skill bar observer and If this section container is visible, add animations
-const skillsSec = document.querySelector('#skillBarContainer');
-
-let skillBarObserver = new IntersectionObserver((e) => {
-  e.forEach((box) => {
-    if (box.isIntersecting) {
-      const skillHtml = document.querySelector('.skill_value.html');
-
-      skillHtml.style.cssText += 'animation-name:html;';
-
-      const skillCss = document.querySelector('.skill_value.css');
-
-      skillCss.style.cssText += 'animation-name:css;';
-
-      const skillJs = document.querySelector('.skill_value.js');
-
-      skillJs.style.cssText += 'animation-name:js;';
-
-      const skillReact = document.querySelector('.skill_value.react');
-
-      skillReact.style.cssText += 'animation-name:react;';
-    }
-  });
-});
-
-skillBarObserver.observe(skillsSec);
-
 // About me btn
 const btnAboutme = document.querySelector('.nav-menu.aboutme');
 btnAboutme.addEventListener('click', () => {
@@ -191,6 +164,7 @@ let workSecondObserver = new IntersectionObserver((e) => {
 workSecondObserver.observe(worksSecond);
 
 // Testimonial first section observer and If this section is visible, add animation
+
 const testimonialsFirst = document.querySelector('.testimonials-desc.first');
 
 let testimonialsFirstObserver = new IntersectionObserver((e) => {
