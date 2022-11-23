@@ -830,11 +830,33 @@ div.scrolling {
 
 .mywork-projectContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+}
+
+.mywork-btnContainer {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.mywork-btn {
+  font-family: var(--content-font-lignt);
+  background-color: #ecdc4b;
+  padding: 0.5em 1em;
+  margin: 0.3em;
+  font-weight: 300;
+  border-radius: 5px;
+}
+
+.mywork-btn:hover {
+  cursor: pointer;
+  opacity: 70%;
 }
 
 .findCarrotImg {
-  width: 60%;
-  cursor: pointer;
+  width: 45%;
   position: relative;
   transition: top 300ms ease-in-out;
 }
@@ -851,11 +873,7 @@ div.scrolling {
   width: 40%;
   height: 200px;
   position: relative;
-  top: 200px;
-  left: -100px;
-  background-color: rgb(255 255 255 / 75%);
   border-radius: 30px;
-  box-shadow: 4px 8px 8px -7px rgba(0, 0, 0, 0.8);
 }
 
 .findCarrotImg.first {
@@ -871,7 +889,6 @@ div.scrolling {
 }
 
 .mywork-projectDescContainer.second {
-  left: 100px;
   z-index: 1;
   animation-duration: 400ms;
 }
@@ -879,7 +896,7 @@ div.scrolling {
 .mywork-projectDescContainer h3 {
   font-family: var(--main-font);
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -887,7 +904,7 @@ div.scrolling {
 .mywork-projectDescContainer span {
   font-weight: 600;
   font-family: var(--content-font-lignt);
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: rgb(63, 63, 63);
 }
 
@@ -1167,22 +1184,24 @@ div.scrolling {
     display: none;
   }
 
-  #skillBarContainer {
-    left: 110px;
-  }
-
   .skill span {
     font-size: 1rem;
   }
 
-  .skill_bar {
-    width: 90px;
-    height: 180px;
+  .skills-langContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
   }
 
-  .skill_value {
-    width: 90px;
+  .skills-container ion-icon {
+    font-size: 8em;
   }
+
+  .skills-container img {
+    width: 7em;
+  }
+
   .testimonials-text {
     margin-bottom: 2em;
   }
@@ -1215,11 +1234,32 @@ div.scrolling {
     display: inline-block;
   }
 
+  .mywork-projectContainer img {
+    width: 500px;
+  }
+
   .mywork-projectDescContainer {
-    top: 0;
-    left: 0;
-    width: 80%;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+    width: 100%;
+  }
+
+  .mywork-projectDescContainer span {
+    font-size: 3em;
+  }
+
+  .mywork-projectDescContainer h3 {
+    font-size: 5em;
+  }
+
+  .mywork-projectDescContainer p {
+    font-size: 2.5em;
+  }
+
+  .mywork-btn {
+    font-size: 3em;
   }
 
   .mywork-projectContainer.second {
@@ -1230,11 +1270,15 @@ div.scrolling {
 
   .mywork-projectDescContainer.second {
     left: 0;
+    margin-top: 0;
   }
 
   .findCarrotImg {
-    margin: auto;
     margin-top: 1em;
+  }
+
+  .findCarrotImg.second {
+    margin-bottom: 0;
   }
 
   .testimonials-highlighter {
