@@ -843,16 +843,19 @@ div.scrolling {
 
 .mywork-btn {
   font-family: var(--content-font-lignt);
-  background-color: #ecdc4b;
+  font-size: 1.1em;
+  background-color: var(--window-yellow);
+  border: 2px solid #121212;
   padding: 0.5em 1em;
   margin: 0.3em;
-  font-weight: 300;
+  font-weight: 600;
+  text-transform: uppercase;
   border-radius: 5px;
 }
 
 .mywork-btn:hover {
   cursor: pointer;
-  opacity: 70%;
+  background-color: #f3f3f3;
 }
 
 .findCarrotImg {
