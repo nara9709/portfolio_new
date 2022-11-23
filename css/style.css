@@ -1064,7 +1064,12 @@ div.scrolling {
   z-index: 1;
 }
 
-.resumeLogo:hover .tooltiptext {
+.resumeLogo:hover .tooltiptext.resume {
+  visibility: visible;
+  z-index: 1;
+}
+
+.blogLogo:hover .tooltiptext.blog {
   visibility: visible;
   z-index: 1;
 }
