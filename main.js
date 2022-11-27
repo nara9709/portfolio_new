@@ -201,6 +201,8 @@ function scrollIntoView(selector) {
   if (viewportWidth < maxWidth) {
     toggleMenu();
   }
+
+  toggleMenu();
 }
 
 window.addEventListener('scroll', () => {
