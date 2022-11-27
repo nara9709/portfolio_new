@@ -82,6 +82,10 @@ a {
   all: unset;
 }
 
+ul {
+  padding: 0;
+}
+
 /* Navbar Section */
 #sec-nav {
   width: var(--section-size);
@@ -173,7 +177,7 @@ a {
   padding-right: 1.3em;
   list-style: none;
   font-family: var(--main-font);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   cursor: pointer;
   z-index: 1;
 }
@@ -198,6 +202,7 @@ a {
 }
 
 .nav-mywork {
+  color: var(--black);
   outline: none;
   border: 3px solid var(--black);
   box-shadow: var(--shadow-big);
@@ -542,6 +547,7 @@ div.scrolling {
   font-family: var(--main-font);
   font-size: 4rem;
   margin-bottom: 1em;
+  padding-top: 0.3em;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -813,7 +819,8 @@ div.scrolling {
 .mywork-title {
   font-family: var(--main-font);
   font-size: 4rem;
-  margin-bottom: 1em;
+  margin-bottom: 0.2em;
+  padding-top: 0.5em;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -824,7 +831,7 @@ div.scrolling {
   width: 24em;
   background-color: var(--highlighter-yellow);
   position: relative;
-  top: -83px;
+  top: -33px;
   z-index: 0;
 }
 
@@ -877,6 +884,8 @@ div.scrolling {
   height: 200px;
   position: relative;
   border-radius: 30px;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .findCarrotImg.first {
@@ -972,7 +981,8 @@ div.scrolling {
 .testimonials-title {
   font-family: var(--main-font);
   font-size: 4rem;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  padding-top: 1em;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -983,7 +993,7 @@ div.scrolling {
   width: 35em;
   background-color: var(--highlighter-yellow);
   position: relative;
-  top: -80px;
+  top: -120px;
   z-index: 0;
 }
 
@@ -1110,14 +1120,15 @@ div.scrolling {
     width: var(--section-size);
     padding: 1em;
     z-index: 2;
-    height: 300px;
+    height: 400px;
     text-align: center;
     flex-direction: column;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    opacity: 1;
   }
 
   #sec-nav.scrolling {
-    height: 100px;
+    height: 130px;
     padding-bottom: 0;
     background-color: var(--main-yellow);
     position: fixed;
@@ -1150,6 +1161,11 @@ div.scrolling {
     opacity: 30%;
   }
 
+  .nav-mywork {
+    margin-top: 1em;
+    font-size: 1.3em;
+  }
+
   #lang-icon {
     font-size: 3rem;
     right: 150px;
@@ -1158,16 +1174,20 @@ div.scrolling {
 
   #sec-nav ul {
     flex-direction: column;
+    padding: 0;
   }
 
   #sec-nav li {
     line-height: 3rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     padding: 0;
   }
 
   #sec-nav .nav.hidden {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 
   #sec-aboutme {
@@ -1206,7 +1226,7 @@ div.scrolling {
   }
 
   .skills-container img {
-    width: 7em;
+    width: 4em;
   }
 
   .testimonials-text {
@@ -1230,15 +1250,16 @@ div.scrolling {
   }
 
   .skills-highlighter {
-    width: 25em;
+    width: 0;
   }
 
   .mywork-highlighter {
-    width: 30em;
+    width: 0;
   }
 
   .mywork-projectContainer {
     display: inline-block;
+    padding: 10em 0.5em;
   }
 
   .mywork-projectContainer img {
@@ -1265,6 +1286,10 @@ div.scrolling {
     font-size: 2.5em;
   }
 
+  .mywork-btnContainer {
+    margin-bottom: 2em;
+  }
+
   .mywork-btn {
     font-size: 3em;
   }
@@ -1284,12 +1309,17 @@ div.scrolling {
     margin-top: 1em;
   }
 
+  .sushi {
+    width: 390px;
+    height: 800px;
+  }
+
   .findCarrotImg.second {
     margin-bottom: 0;
   }
 
   .testimonials-highlighter {
-    width: 55em;
+    width: 0;
   }
 
   .skills-langContainer p {

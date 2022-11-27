@@ -132,7 +132,7 @@ let workFirstObserver = new IntersectionObserver((e) => {
       myWorkImgFirst.style.cssText += 'animation-name: fadeInLeft;';
 
       const myWorkDescFirst = document.querySelector(
-        '.mywork-projectDescContainer.first'
+        '.mywork-projectDescContainer.right'
       );
 
       myWorkDescFirst.style.cssText += 'animation-name: fadeInRight;';
