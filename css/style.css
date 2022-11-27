@@ -1208,10 +1208,6 @@ div.scrolling {
     margin-top: 2em;
   }
 
-  #illustration_skills {
-    display: none;
-  }
-
   .skill span {
     font-size: 1rem;
   }
@@ -1251,6 +1247,10 @@ div.scrolling {
 
   .skills-highlighter {
     width: 0;
+  }
+
+  #sec-skills h1 {
+    font-size: 1.2rem;
   }
 
   .mywork-highlighter {
@@ -1323,7 +1323,7 @@ div.scrolling {
   }
 
   .skills-langContainer p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   div.scrolling {
